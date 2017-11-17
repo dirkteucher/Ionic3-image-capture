@@ -1,30 +1,51 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { CaptureDrivingLicencePage } from '../pages/capture-driving-licence/capture-driving-licence';
+import { SignInPage } from '../pages/sign-in/sign-in';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { Camera } from '@ionic-native/camera';
+import { FormsModule } from '@angular/forms';
+
+import { CheckLoginProvider } from '../providers/check-login/check-login';
+
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    CaptureDrivingLicencePage,
+    SignInPage,
+    ContactUsPage,
+    TabsControllerPage
+
+    // HomePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    FormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    CaptureDrivingLicencePage,
+    SignInPage,
+    ContactUsPage,
+    TabsControllerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CheckLoginProvider
   ]
 })
 export class AppModule {}
