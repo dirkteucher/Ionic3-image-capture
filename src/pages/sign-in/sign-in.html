@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar class="customDark"  hide-back-button="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Sign In
+    </ion-title>
+
+    <div class="headerSignInOut" (click)="signOut()">
+      <ion-buttons  end>
+        <ion-icon *ngIf="!loggedIn" ios="ios-log-in" md="md-log-in"></ion-icon>
+        <ion-icon *ngIf="loggedIn" ios="ios-log-out" md="md-log-out"></ion-icon>
+      </ion-buttons>
+    </div>
+
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <div class="signInWrapper">
+      <form id="signIn-form1" (ngSubmit)="authenticateUser()">
+          <ion-item id="signIn-input2">
+            <ion-label floating>
+              Username
+            </ion-label>
+            <ion-input 
+            [(ngModel)]="name" 
+            [ngModelOptions]="{standalone: true}" 
+            ng-controller="email" 
+            type="email" 
+            placeholder="" 
+            required minlength="4"
+            (keyup)="checkSignInButtonEnabled('username')"
+            ></ion-input> 
+          </ion-item>
+          <ion-item id="signIn-input3">
+            <ion-label floating>
+              Password 
+            </ion-label>
+            <ion-input 
+            [(ngModel)]="password" 
+            [ngModelOptions]="{standalone: true}" 
+            ng-controller="password" 
+            type="password" 
+            placeholder="" 
+            required minlength="4"
+            (keyup)="checkSignInButtonEnabled('password')"
+            ></ion-input>
+          </ion-item>
+          <button id="signIn-button5" [disabled]="!signInButtonEnabled" ion-button block>
+            Sign In!
+          </button>    
+        </form>
+  </div>
+</ion-content>

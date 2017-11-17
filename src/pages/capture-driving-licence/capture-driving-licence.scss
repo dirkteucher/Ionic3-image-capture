@@ -1,0 +1,46 @@
+page-capture-driving-licence {
+    #page2 #captureDrivingLicence-button1{
+        margin:40px 0;
+    }
+
+    h3.imageCaptureHeader {
+        text-align: center;
+    }
+
+    #page2 .cameraCaptureAdvice video {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 620px;
+    }
+
+    #page2 .imageCaptureButtonWrapper {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #page2 .slide-zoom img {
+        width: 60%;
+        border-radius: 80px;
+        max-width: 540px;
+    }
+
+    ion-slides {
+        height:80%;
+    }
+
+    #page2 {
+        background-color: rgb(57, 65, 76);
+        color: #fff
+    }
+
+    #page2 .slide-zoom img {
+        width:90%;
+    }
+    .test1 {
+        background-color: red;
+    }
+    .test2 {
+        background-color: blue;
+    }
+}

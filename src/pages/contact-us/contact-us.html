@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar class="customDark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contact Us
+    </ion-title>
+
+    <div (click)="signOut()">
+      <ion-buttons  end>
+        <ion-icon ios="ios-log-out" md="md-log-out" ></ion-icon>
+      </ion-buttons>
+    </div>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <form id="contactUs-form3">
+    <ion-item id="contactUs-input6">
+      <ion-label>
+        Your Name
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:11px;" id="contactUs-spacer6"></div>
+    <ion-item id="contactUs-input7">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="email" placeholder=""></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:11px;" id="contactUs-spacer5"></div>
+    <ion-item id="contactUs-input9">
+      <ion-label>
+        Phone Number
+      </ion-label>
+      <ion-input type="tel" placeholder=""></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:11px;" id="contactUs-spacer4"></div>
+    <ion-item id="contactUs-input10">
+      <ion-label>
+        What is your enquiry about?
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

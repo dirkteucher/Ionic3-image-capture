@@ -1,4 +1,4 @@
-// http://ionicframework.com/docs/theming/
+// http://ionicframework.com/docs/v2/theming/
 
 
 // App Global Sass
@@ -14,3 +14,42 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/* Custom header color needs the customDark style applied to the ion-navbar in each page*/
+.customDark {
+    background-color: #39485a;
+}
+
+.customDark div{
+    background-color:#39485a;
+    color: #fff;
+}
+
+.customDark .back-button {
+    color: #fff;
+}
+.customDark .back-button:hover {
+    color: #fff;
+}
+
+button.bar-buttons.bar-buttons-md.bar-button.bar-button-md.bar-button-default.bar-button-default-md.bar-button-menutoggle.bar-button-menutoggle-md{
+    color: #fff;
+}
+
+ion-buttons.bar-buttons.bar-buttons-md {
+    color: #fff;
+    margin-right: 20px;
+}
+
+// Header menu log in and out buttons
+ion-icon {
+    font-size: 2.4em;
+    padding-bottom:22px;
+    padding-right: 6px;
+}
+
+
+//Side menu
+#menu-button5 {
+    margin-top: 20px;
+}

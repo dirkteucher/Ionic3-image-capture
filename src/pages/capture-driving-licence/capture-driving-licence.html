@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar class="customDark" hide-back-button="true" cache-view="false">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Welcome {{username}}
+    </ion-title>
+
+    <div (click)="signOut()">
+      <ion-buttons  end>
+        <ion-icon *ngIf="!loggedIn" ios="ios-log-in" md="md-log-in"></ion-icon>
+        <ion-icon *ngIf="loggedIn" ios="ios-log-out" md="md-log-out" ></ion-icon>
+      </ion-buttons>
+    </div>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <div>
+    
+    <img class="capturedImage" [src]="base64Image" *ngIf="base64Image" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
+  
+  </div>
+  <div class="imageCaptureButtonWrapper">
+    <button id="captureDrivingLicence-button1" (click)="takePicture()" ion-button color="positive" block>
+      Capture image
+    </button>
+    <button id="sendDrivingLicence-button2" *ngIf="imageSuccess" (click)="sendImage()" ion-button color="positive" block>
+      Send image
+    </button>  
+  </div>
+  
+
+
+  <ion-slides 
+  pager="true" 
+  loop="true" 
+  autoplay="4000"
+  speed="1000"
+  (ionSlideAutoplay)="startAutoPlay()"
+  (ionSlideDidChange)="slideChanged()">
+      <ion-slide>
+          <h1>
+            Good example
+          </h1>
+          <img src="assets/img/aurora-borealis2.jpg"/>
+          <p>
+              &nbsp;
+            </p>
+      </ion-slide>
+      <ion-slide>
+            <h1>
+              Bad
+            </h1>
+            <img src="assets/img/aurora-borealis3.jpg"/>
+            <p>
+              Try not to send blurry images.
+            </p>
+      </ion-slide>
+      <ion-slide>
+          <h1>
+              Bad
+            </h1>
+          <img src="assets/img/aurora-borealis.jpg"/>
+          <p>
+            Watch out for lights overhead reflecting into the licence.
+          </p>
+      </ion-slide>
+    </ion-slides>
+     
+</ion-content>
+
