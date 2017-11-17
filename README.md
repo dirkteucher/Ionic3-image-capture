@@ -1,26 +1,28 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Ionic 3 image capture
+This is a fully functioning iOS/Android Ionic app. See screenshot.png to get an idea of what
+the application looks like.
+![Alt text](./screenshot.png?raw=true "Ionic 3 camera capture example")
 
-## How to use this template
+## Features
+1) Login/Logout (Not connected to server)
+2) Email/PSW basic front end authentication with service provider
+3) Image capture from mobile device using camera or local files
+4) Gallery slideshow
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+##Dev requirements
+1) Install node
+2) "npm install -g ionic cordova"
+3) Install Android file transfer "https://www.android.com/filetransfer/"
+4) Install xcode application "https://developer.apple.com/xcode/"
+## How to use this app
 
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
+-- First add the platform you would like to test on --
 ```bash
 $ ionic cordova platform add ios
 $ ionic cordova run ios
 ```
 
-Substitute ios for android if not on a Mac.
-
+1) From terminal - "ionic serve"  - This will serve the app to be viewed on a Browser
+2) Connect Android device and unlock - "ionic cordova run android" - This will create a .pkg file and push it onto the device
+3) To install apps onto Apple devices this must be done from the Xcode application.
